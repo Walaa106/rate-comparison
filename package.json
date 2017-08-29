@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "algoliasearch": "^3.24.3",
+    "axios": "^0.16.2",
     "elasticsearch": "^13.2.0",
     "firebase": "^4.2.0",
     "firebase-admin": "^5.1.0",

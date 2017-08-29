@@ -9,12 +9,19 @@ const config = {
             name: 'rate-comparison'
         },
         port: process.env.PORT || 3000,
-        apiSearch: 'https://api-staging-2.yamsafer.me/api/v3/search',
+        api: {
+            url: 'https://api-staging-3.yamsafer.me/'
+        },
         databaseURL: "https://yamsaferstaging.firebaseio.com",
         elastic: {
             host: 'elastic-staging.yamsafer.me:9200',
             type: 'property',
             index: 'properties'
+        },
+        analytics: {
+            host: 'elastic-staging.yamsafer.me:9200',
+            index: 'analytics',
+            type: 'weekly_rates'
         }
     },
     staging: {
@@ -23,11 +30,18 @@ const config = {
             name: 'rate-comparison'
         },
         port: process.env.PORT || 3000,
-        apiSearch: 'https://api-staging.yamsafer.me/api/v3/search',
+        api: {
+            url: 'https://api-staging-3.yamsafer.me/'
+        },
         elastic: {
             host: 'elastic-staging.yamsafer.me:9200',
             type: 'property',
             index: 'properties'
+        },
+        analytics: {
+            host: 'elastic-staging.yamsafer.me:9200',
+            index: 'analytics',
+            type: 'weekly_rates'
         }
     },
     production: {
@@ -36,11 +50,18 @@ const config = {
             name: 'rate-comparison'
         },
         port: process.env.PORT || 3000,
-        apiSearch: 'https://api.yamsafer.me/api/v3/search',
+        api: {
+            url: 'https://api.yamsafer.me/'
+        },
         elastic: {
             host: 'elastic.yamsafer.me:9200',
             type: 'property',
             index: 'properties'
+        },
+        analytics: {
+            host: 'elastic-staging.yamsafer.me:9200',
+            index: 'analytics',
+            type: 'weekly_rates'
         }
     }
 };
